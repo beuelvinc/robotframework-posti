@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ./variables.robot
+Variables	./variables.yaml
 Library     ../resource/utils.py
 Library     Collections
 
