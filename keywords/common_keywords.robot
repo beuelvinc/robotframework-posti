@@ -106,4 +106,10 @@ Check Total and Delivery Fee in Cart Page
 Go To Checkout 
     Click Application Element     xpath=${checkout_button}
 
-    
+Select Stamps Get Their Data Go to Cart Get All Data and Validate Test Cases
+    [Arguments]    ${start_numer}     ${end_numer}
+    ${added_items}     Add N Stamps To Cart    ${start_numer}     ${end_numer}
+    Go To Cart
+    ${items_in_cart}    Get All Items From Cart    ${start_numer}     ${end_numer}
+    Check Whether Items Correctly Added    ${items_in_cart}     ${added_items}
+    Check Total and Delivery Fee in Cart Page
